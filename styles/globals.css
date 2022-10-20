@@ -30,8 +30,14 @@ a {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
-  position: relative;
+  background-color: #fff;
+  padding: 18px 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin-left: -10px;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
 }
 
 .marquee-text {
@@ -150,6 +156,7 @@ span.text-red {
   border-radius: 15px;
   position: relative;
   height: 375px;
+  margin-top: 60px;
   line-height: 0.9;
   width: 100%;
 }
@@ -164,13 +171,20 @@ span.text-red {
   background-color: #f02d34;
   color: white;
   border: none;
-  margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  z-index: 10000 !important;
 }
-
+.hero-banner-product {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.hero-banner-product button {
+  margin-left: 35%;
+  margin-bottom: 5px;
+  transform: translate(0, -5px);
+}
 .hero-banner-container h3 {
   font-size: 3.5rem;
   margin-top: 4px;
@@ -186,16 +200,19 @@ span.text-red {
 .hero-banner-image {
   position: absolute;
   border-radius: 30px;
-  top: 0%;
-  right: 20%;
-  width: 25rem;
+  width: 40%;
+  height: 60%;
   float: auto;
-  margin-right: 2rem;
-  transform: translate(12rem, 4rem);
+  top: 15%;
+  right: 5%;
 }
 
+.navbar-container.scrolled {
+  background: #5f5f5f;
+}
 .hero-button-text {
   margin-top: 20px;
+  height: 100;
 }
 
 .desc {
@@ -709,26 +726,22 @@ span.text-red {
 .hero-banner-container-min {
   margin-right: 1rem;
 }
-
+@media (max-width: 500px) {
+  .hero-banner-container button {
+    margin-left: -50%;
+  }
+}
 @media screen and (max-width: 800px) {
-  .hero-banner-container {
-    height: 560px;
-  }
-  .hero-banner-container-min {
-    width: 120%;
-  }
   .cart-wrapper {
   }
   .empty-cart {
     margin-left: 5rem;
   }
 
-  .hero-banner-image {
+  /* .hero-banner-image {
     width: 50%;
     height: 40%;
-    top: 35%;
-    right: -6%;
-  }
+  } */
 
   .footer-banner-container {
     height: 560px;
@@ -787,15 +800,6 @@ span.text-red {
   .hero-banner-container h3 {
     font-size: 2rem;
     width: 1rem;
-  }
-
-  .hero-banner-container button {
-    margin-top: 90px;
-    z-index: 10000;
-  }
-
-  .desc {
-    bottom: 60px;
   }
 
   .product-detail-container {
