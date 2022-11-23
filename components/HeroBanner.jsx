@@ -14,10 +14,7 @@ const HeroBanner = ({ heroBanner }) => {
           alt="tesla s plaid"
           className="hero-banner-image"
         />
-        {console.log(
-          '🚀 ~ file: HeroBanner.jsx ~ line 6 ~ HeroBanner ~ heroBanner',
-          heroBanner
-        )}
+
         <div className="hero-banner-product">
           <Link href={`/product/${heroBanner?.slug}`}>
             <button type="button" className="hero-button-text" disabled>

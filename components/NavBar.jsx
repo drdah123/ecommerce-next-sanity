@@ -4,7 +4,7 @@ import { AiOutlineShopping } from 'react-icons/ai';
 import Cart from './Cart';
 import { useStateContext } from '../Context/StateContext';
 
-const NavBar = () => {
+const Navbar = () => {
   const { showCart, setShowCart, cartItem, totalQuantities } =
     useStateContext();
   const [scrolled, setScrolled] = useState(false);
@@ -40,4 +40,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
